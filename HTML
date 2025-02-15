@@ -13,7 +13,7 @@
         <header>
             <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1379/1379014.png" class="logo" alt="Furniture Logo"></a>
             <ul>
-                <li><a href="#">Home</a></li>
+        <li><a href="#">Home</a></li>
                 <li><a href="#">Living Room</a></li>
                 <li><a href="#">Bedroom</a></li>
                 <li><a href="#">Kitchen</a></li>
@@ -40,24 +40,5 @@
             <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a></li>
         </ul>
     </section>
-
-    <script>
-        function imgSlider(anything) {
-            document.querySelector('.main-img').src = anything;
-        }
-
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            header.classList.toggle('scrolled', window.scrollY > 0);
-        });
-
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navigation = document.querySelector('header ul');
-        
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            navigation.classList.toggle('active');
-        });
-    </script>
 </body>
 </html>
