@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Furniture Store</title>
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            padding: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        header .logo {
+            position: relative;
+            max-width: 120px;
+        }
+
+        header ul {
+            position: relative;
+            display: flex;
+            gap: 40px;
+        }
+
+        header ul li {
+            list-style: none;
+        }
+
+        header ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        header ul li a:hover {
+            color: #c87e4f;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container .text-box {
+            position: relative;
+            max-width: 600px;
+        }
+
+        .container .text-box h2 {
+            color: #333;
+            font-size: 3.5em;
+            line-height: 1.2em;
+            font-weight: 700;
+        }
+
+        .container .text-box h2 span {
+            color: #c87e4f;
+            font-size: 1.2em;
+        }
+
+        .container .text-box p {
+            color: #666;
+            margin: 20px 0;
+            line-height: 1.6em;
+        }
+
+        .container .text-box a {
+            display: inline-block;
+            padding: 12px 35px;
+            background: #c87e4f;
+            color: #fff;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .container .text-box a:hover {
+            background: #a5673d;
+        }
+
+        .container .img-box {
+            width: 300px;
+            display: flex;
+            justify-content: -end;
+        }
+
+        .container .img-box img {
+            max-width: 200px;
+        }
+
+        .thumb {
+            position: absolute;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 30px;
+        }
+
+        .thumb li {
+            list-style: none;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .thumb li:hover {
+            transform: translateY(-15px);
+        }
+
+        .thumb li img {
+            max-width: 110px;
+            border-radius: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .social {
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .social li {
+            list-style: none;
+        }
+
+        .social li a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #c87e4f;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .social li a:hover {
+            background: #a5673d;
+            transform: translateY(-5px);
+        }
+
+        .social li a img {
+            filter: invert(1);
+            width: 20px;
+        }
+
+        .circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #c87e4f;
+            clip-path: circle(700px at right 800px);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1379/1379014.png" class="logo" alt="Furniture Logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Living Room</a></li>
+                <li><a href="#">Bedroom</a></li>
+                <li><a href="#">Kitchen</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="container">
+            <div class="text-box">
+                <h2>Modern Furniture <br>For Your <span>Home</span></h2>
+                <p>Discover our exclusive collection of premium furniture that combines modern design with exceptional comfort.</p>
+                <a href="#">Shop Now</a>
+            </div>
+            <div class="img-box">
+                <img src="th (2).jpg" class="main-img" alt="Modern Sofa">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="l (1).jpg" onclick="imgSlider('https://www.freeiconspng.com/uploads/table-png-5.png')"></li>
+            <li><img src="OIP.jpg" onclick="imgSlider('https://www.pngall.com/wp-content/uploads/2016/03/Chair-PNG-2.png')"></li>
+        </ul>
+        <ul class="social">
+            <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384053.png" alt="Facebook"></a></li>
+            <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a></li>
+            <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a></li>
+        </ul>
+    </section>
+
+    <script>
+        function imgSlider(anything) {
+            document.querySelector('.main-img').src = anything;
+        }
+
+        
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 0);
+        });
+
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navigation = document.querySelector('header ul');
+        
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
